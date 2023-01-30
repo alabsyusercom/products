@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="css_project.css" >
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="crud">
+  <div class="head">
+<h2>CRUD</h2>
+<P>PRODUCT MANAGMENT SYSTEM</P>
+  </div>
+<!-- /////////////////////////////// -->
+
+<div class="inputs">
+<input  type="text"   id="title" placeholder="title" />
+<div class="price">
+    <input onkeyup="getTotal()" type="number"  id="price" placeholder="price" />
+    <input onkeyup="getTotal()" type="number"  id="taxes" placeholder="taxes" />
+    <input onkeyup="getTotal()" type="number"   id="ads" placeholder="ads" />
+    <input onkeyup="getTotal()" type="number"  id="discount" placeholder="discount" />
+<small id="total"></small>
+</div>
+<input  type="text"  id="category" placeholder="category" />
+<input id="count" placeholder="count" />
+<button id="create">create</button>
+</div>
+<!-- /////////////////////// -->
+
+<div class="outputs">
+<div class="searchBlock">
+<input onkeyup="findData(this.value.toLowerCase())" type="text" id="search" placeholder="Search" />
+<div class="btnsearch">
+<button onclick="getsearchMood(this.id)" id="searchTitle">search by title</button>
+<button onclick="getsearchMood(this.id)" id="searchcategory">search by category</button>
+
+
+</div>
+</div>
+
+<div id="deleteall">
+
+</div>
+
+
+<table>
+<tr>
+<th>id</th>
+<th>title</th>
+<th>price</th>
+<th>taxes</th>
+<th>ads</th>
+<th>discount</th>
+<th>category</th>
+<th>total</th>
+<th>update</th>
+<th>delete</th>
+
+</tr>
+<tbody id="tbody">
+    
+</tbody>
+
+
+
+</table>
+
+
+
+
+</div>
+    
+
+
+
+
+
+    </div>
+    <script src="js_project.js"></script>
+</body>
+</html>
